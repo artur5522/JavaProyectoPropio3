@@ -1,0 +1,18 @@
+CREATE TABLE `componente` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) DEFAULT NULL,
+  `nro_serie` varchar(255) DEFAULT NULL,
+  `fk_id_computadora` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK2se5l8vccqyp1vv66reovppxg` (`fk_id_computadora`),
+  CONSTRAINT `FK2se5l8vccqyp1vv66reovppxg` FOREIGN KEY (`fk_id_computadora`) REFERENCES `computadora` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `computadora` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(255) DEFAULT NULL,
+  `marca` varchar(255) DEFAULT NULL,
+  `modelo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
